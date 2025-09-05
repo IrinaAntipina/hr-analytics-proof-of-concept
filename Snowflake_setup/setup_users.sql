@@ -1,0 +1,25 @@
+USE ROLE USERADMIN;
+
+CREATE USER IF NOT EXISTS Irina
+    PASSWORD = "ewq1234"
+    DEFAULT_WAREHOUSE = job_analysis_wh;
+CREATE USER IF NOT EXISTS Mohammad
+    PASSWORD = "hassan93535"
+    DEFAULT_WAREHOUSE = job_analysis_wh;
+CREATE USER IF NOT EXISTS Alisher
+    PASSWORD = "12345"
+    DEFAULT_WAREHOUSE = job_analysis_wh;
+CREATE USER IF NOT EXISTS Andreas
+    PASSWORD = "login12345"
+    DEFAULT_WAREHOUSE = job_analysis_wh;
+CREATE USER IF NOT EXISTS DLT_role
+    PASSWORD = "login12345"
+    DEFAULT_WAREHOUSE = job_analysis_wh;
+CREATE USER IF NOT EXISTS DBT_role
+    PASSWORD = "login12345"
+    DEFAULT_WAREHOUSE = job_analysis_wh;
+CREATE USER IF NOT EXISTS Streamlit_role
+    PASSWORD = "login12345"
+    DEFAULT_WAREHOUSE = job_analysis_wh;
+
+SHOW users;
