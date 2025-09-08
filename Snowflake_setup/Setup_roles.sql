@@ -31,6 +31,7 @@ GRANT ALL ON FUTURE TABLES IN DATABASE Jobtech_analysis TO ROLE jobtech_team_rol
 
 GRANT USAGE ON WAREHOUSE job_analysis_wh TO ROLE jobtech_dlt_role;
 GRANT USAGE ON DATABASE Jobtech_analysis TO ROLE jobtech_dlt_role;
+GRANT CREATE SCHEMA ON DATABASE Jobtech_analysis TO ROLE jobtech_dlt_role;
 GRANT ALL ON SCHEMA Jobtech_analysis.staging TO ROLE jobtech_dlt_role;
 GRANT ALL ON FUTURE TABLES IN SCHEMA Jobtech_analysis.staging TO ROLE jobtech_dlt_role;
 
