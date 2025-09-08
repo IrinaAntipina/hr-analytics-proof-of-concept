@@ -12,7 +12,7 @@ def _get_ads(url_for_search, params):
     return json.loads(response.content.decode("utf8"))
 
 
-@dlt.resource(write_disposition="append", primary_key="ID")
+@dlt.resource(write_disposition="merge", primary_key="ID")
 def jobsearch_resource(params):
     """
     params should include at least:
