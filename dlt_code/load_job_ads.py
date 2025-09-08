@@ -12,7 +12,7 @@ def _get_ads(url_for_search, params):
     return json.loads(response.content.decode("utf8"))
 
 
-@dlt.resource(write_disposition="append")
+@dlt.resource(write_disposition="append", primary_key="ID")
 def jobsearch_resource(params):
     """
     params should include at least:
@@ -62,7 +62,7 @@ def run_pipeline(query, table_name, occupation_fields):
 
 
 if __name__ == "__main__":
-    working_directory = Path(__file__).parent.parent
+    working_directory = Path(__file__).parent
     os.chdir(working_directory)
 
     query = ""
