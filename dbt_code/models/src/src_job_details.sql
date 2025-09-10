@@ -4,6 +4,7 @@ with stg_job_ads as (
 
 SELECT
     id,
+    headline,
     headline as job_details_key,
     external_id,
     label,
