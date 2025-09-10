@@ -1,13 +1,20 @@
+with stg_job_ads as (
+    select * from {{ source('jobtech_analysis', 'stg_ads') }}
+)
 
-with stg_job_ads as (   
-    select *
-    from {{ source('jobtech_analysis', 'stg_ads') }})
+    select  
+        headline as employer_id,
+        employer__name,
+        employer__workplace as employer_workplace,
+        employer__organization_number as employer_organization_number,
+        workplace_address__street_address as workplace_street_address,
+        workplace_address__region as workplace_region,
+        workplace_address__municipality_code as workplace_postcode,
+        workplace_address__municipality as workplace_city,
 
+        workplace_address__country as workplace_country
 
-select  employer__organization_number as employer_id,
-    employer__name,
-    employer__url,
-    employer__workplace,
-    employer__phone_number
-FROM
-    stg_job_ads
+    FROM
+        stg_job_ads
+    
+    
