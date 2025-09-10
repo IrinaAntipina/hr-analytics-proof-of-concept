@@ -1,3 +1,5 @@
 {
-    "taipyStudio.gUI.elementsFilePaths": []
+    "taipyStudio.gUI.elementsFilePaths": [],
+    "dbt.perspectiveTheme": "Vintage",
+    "dbt.queryLimit": 20
 }
