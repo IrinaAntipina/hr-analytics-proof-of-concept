@@ -86,3 +86,6 @@ USE DATABASE Jobtech_analysis;
 
 USE ROLE SYSADMIN;
 SHOW SCHEMAS IN DATABASE Jobtech_analysis;
+
+SHOW TABLES IN SCHEMA Jobtech_analysis.STAGING;
+
