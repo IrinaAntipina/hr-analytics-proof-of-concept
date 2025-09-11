@@ -3,7 +3,7 @@ with stg_job_ads as (
 )
 
     select  
-        employer__organization_number as employer_id,
+        employer__organization_number,
         employer__name as employer_name,
         employer__workplace as employer_workplace,
         workplace_address__street_address as workplace_street_address,
