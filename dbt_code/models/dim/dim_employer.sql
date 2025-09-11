@@ -10,4 +10,5 @@ select
     workplace_city,
     workplace_postcode,
     workplace_country
+    
 from src_employer
