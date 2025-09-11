@@ -3,46 +3,19 @@ with stg_job_ads as (
 )
 
 SELECT
-    id,
+    id as job_details_id,
     headline,
-    headline as job_details_key,
-    external_id,
-    label,
-    webpage_url,
-    logo_url,
-    
-
+ 
     description__text as description,
-    description__text_formatted as description_formatted,
-    description__conditions as conditions,
+    description__text_formatted as description_html_formatted,
     
-    employment_type__concept_id as employment_type_concept_id,
     employment_type__label as employment_type,
-    employment_type__legacy_ams_taxonomy_id as employment_type_legacy_id,
-    
-    salary_type__concept_id as salary_type_concept_id,
-    salary_type__label as salary_type,
-    salary_type__legacy_ams_taxonomy_id as salary_type_legacy_id,
-    salary_description,
-    
-    duration__concept_id as duration_concept_id,
-    duration__label as duration,
-    duration__legacy_ams_taxonomy_id as duration_legacy_id,
-    
-    working_hours_type__concept_id as working_hours_concept_id,
-    working_hours_type__label as working_hours_type,
-    working_hours_type__legacy_ams_taxonomy_id as working_hours_legacy_id,
-    
-    scope_of_work__min as scope_work_min,
-    scope_of_work__max as scope_work_max,
 
-    experience_required,
-    access_to_own_car,
-    driving_license_required,
+    duration__label as duration,
     
-    publication_date,
-    last_publication_date,
-    removed,
-    source_type
+    salary_type__label as salary_type,
+    
+    scope_of_work__min as scope_of_work_min,
+    scope_of_work__max as scope_of_work_max
 
 FROM stg_job_ads
