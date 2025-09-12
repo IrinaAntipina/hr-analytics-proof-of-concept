@@ -5,7 +5,6 @@ with stg_job_ads as (
 
 SELECT DISTINCT 
     
-    occupation__label as occupation_label,
     occupation__label as occupation,
 
     occupation_group__label as occupation_group,
