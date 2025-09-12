@@ -29,7 +29,7 @@ select
     ft.application_deadline
 from
     fct_table ft
-left join dim_employer de ON dm.employer_id = ft.employer_id
+left join dim_employer de ON de.employer_id = ft.employer_id
 left join dim_auxilliary da ON da.auxilliary_attribute_id = ft.auxilliary_attribute_id
 left join dim_job_details dj ON dj.job_details_id = ft.job_details_id
 left join dim_occupation do ON do.occupation_id = ft.occupation_id
