@@ -47,6 +47,7 @@ GRANT ALL ON FUTURE TABLES IN SCHEMA Jobtech_analysis.warehouse TO ROLE jobtech_
 GRANT ALL ON FUTURE VIEWS IN SCHEMA Jobtech_analysis.warehouse TO ROLE jobtech_dbt_role;
 GRANT ALL ON FUTURE TABLES IN SCHEMA Jobtech_analysis.mart TO ROLE jobtech_dbt_role;
 GRANT ALL ON FUTURE VIEWS IN SCHEMA Jobtech_analysis.mart TO ROLE jobtech_dbt_role;
+GRANT CREATE SCHEMA ON DATABASE Jobtech_analysis TO ROLE jobtech_dbt_role;
 
 
 GRANT USAGE ON WAREHOUSE job_analysis_wh TO ROLE jobtech_streamlit_role;
