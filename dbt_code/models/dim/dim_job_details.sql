@@ -4,7 +4,6 @@ with src_job_details as (
 
 select
     {{ dbt_utils.generate_surrogate_key(['headline']) }} as job_details_id,
-    job_details_id,
     headline,
     description,
     description_html_formatted,
