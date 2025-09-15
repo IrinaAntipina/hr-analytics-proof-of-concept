@@ -69,6 +69,6 @@ if __name__ == "__main__":
     table_name = "job_ads"
 
 
-    occupation_fields = ("yhCP_AqT_tns", "Uuf1_GMh_Uvwf", "9puE_nYg_crq")
+    occupation_fields = ("yhCP_AqT_tns", "Uuf1_GMh_Uvw", "9puE_nYg_crq")
 
     run_pipeline(query, table_name, occupation_fields)

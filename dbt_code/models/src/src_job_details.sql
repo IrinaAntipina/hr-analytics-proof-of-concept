@@ -3,7 +3,7 @@ with stg_job_ads as (
 )
 
 SELECT
-    id as job_details_id,
+    id,
     headline,
  
     description__text as description,
