@@ -1,5 +1,7 @@
 {
     "taipyStudio.gUI.elementsFilePaths": [],
     "dbt.perspectiveTheme": "Vintage",
-    "dbt.queryLimit": 500
+    "dbt.queryLimit": 500,
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
 }
