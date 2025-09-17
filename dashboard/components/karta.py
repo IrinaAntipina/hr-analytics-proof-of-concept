@@ -15,8 +15,7 @@ def karta(table="mart_main"):
                                 {table}
                             GROUP BY occupation, workplace_region
                             ORDER BY total_vacancies DESC
-                            LIMIT 10
-                            """).df()
+                            """)
     
     with open("assets/swedish_regions.geojson", "r", encoding="utf-8") as file:
         json_data = json.load(file)
@@ -28,8 +27,9 @@ def karta(table="mart_main"):
     
     return df, json_data, region_codes
 
-def create_map(df, json_data, region_codes):
+def create_map(table):
     
+    df, json_data, region_codes = karta(table)
     log_vacancies = np.log(df["total_vacancies"] + 1)
     
     matched_names = [
