@@ -25,16 +25,15 @@ def show_top_employers(table='mart_main'):
         x='VACANCIES',
         y='EMPLOYER_NAME',
         #orientation='h',
-        text='VACANCIES',
-        #color='VACANCIES',
-        color_continuous_scale='Blues'
+        text='VACANCIES'
     )
     fig.update_traces(
         textposition='outside',
         textfont=dict(
             size=12,
             color='black'
-        )
+        ),
+        marker_color='#b07cf4'
     )
     fig.update_layout(
         yaxis={'categoryorder':'total ascending'},

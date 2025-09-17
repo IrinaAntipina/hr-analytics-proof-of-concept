@@ -14,10 +14,9 @@ def occupation_chart(table="mart_main"):
                             LIMIT 10
                             """)
     
-    fig, ax = plt.subplots(1, facecolor="#f5f5f5")
-    ax.set_facecolor("#f5f5f5")
+    fig, ax = plt.subplots(1)
 
-    ax.barh(df["OCCUPATION"], df["TOTAL_VACANCIES"], color="#3c0008")
+    ax.barh(df["OCCUPATION"], df["TOTAL_VACANCIES"], color="#b07cf4")
     ax.invert_yaxis()
 
     ax.set_xlabel("Antal lediga jobb")
