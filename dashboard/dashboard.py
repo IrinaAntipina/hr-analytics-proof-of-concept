@@ -1,5 +1,9 @@
 import streamlit as st
-from pages.top_employers import show_top_employers
+from components.top_employers import show_top_employers
+from components.top_occupations import occupation_chart
+
+
+
 
 
 def dashboard_page():
@@ -16,10 +20,8 @@ col3, col4 = st.columns(2)
 with col1:
     show_top_employers()
        
-           
-
 with col2:
-        st.info("Other content here")
+    occupation_chart()
 with col3:
         st.info("Other content here")
 with col4:
