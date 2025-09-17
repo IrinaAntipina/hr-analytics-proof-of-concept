@@ -17,6 +17,18 @@ def dashboard_page():
     # Sidebar
     with st.sidebar:
         st.markdown('<div class="logo-container">', unsafe_allow_html=True)
+        st.markdown("""
+        <div style='text-align: center; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                    border-radius: 10px; color: white; margin-bottom: 20px;'>
+            <h2>📊 Analytics</h2>
+            <p style='margin: 0; opacity: 0.8;'>Dashboard</p>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        st.markdown("---")
+
+        st.markdown('<div class="logo-container">', unsafe_allow_html=True)
         option = st.selectbox(
                 "Occupation Field",
                 chooser
