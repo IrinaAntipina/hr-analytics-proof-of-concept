@@ -211,3 +211,11 @@ __marimo__/
 *.log
 .DS_Store
 __pycache__/
+
+test.py
+
+# DBT
+
+target/
+dbt_packages/
+logs/

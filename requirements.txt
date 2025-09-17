@@ -15,7 +15,9 @@ charset-normalizer==3.4.3
 click==8.2.1
 colorama==0.4.6
 comm==0.2.3
+contourpy==1.3.3
 cryptography==45.0.7
+cycler==0.12.1
 daff==1.4.2
 dbt-adapters==1.16.6
 dbt-common==1.28.0
@@ -28,8 +30,10 @@ debugpy==1.8.16
 decorator==5.2.1
 deepdiff==7.0.1
 dlt==1.15.0
+dotenv==0.9.9
 executing==2.2.1
 filelock==3.19.1
+fonttools==4.59.2
 fsspec==2025.9.0
 gitdb==4.0.12
 gitpython==3.1.45
@@ -54,10 +58,12 @@ jsonschema-specifications==2025.4.1
 jupyter-client==8.6.3
 jupyter-core==5.8.1
 keyring==25.6.0
+kiwisolver==1.4.9
 leather==0.4.0
 markdown-it-py==4.0.0
 markupsafe==3.0.2
 mashumaro==3.14
+matplotlib==3.10.6
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 more-itertools==10.8.0
@@ -91,7 +97,9 @@ pydeck==0.9.1
 pygments==2.19.2
 pyjwt==2.10.1
 pyopenssl==25.1.0
+pyparsing==3.2.4
 python-dateutil==2.9.0.post0
+python-dotenv==1.1.1
 python-slugify==8.0.4
 pytimeparse==1.1.8
 pytz==2025.2
