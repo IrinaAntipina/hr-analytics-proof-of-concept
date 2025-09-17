@@ -21,4 +21,3 @@ def get_job_list(query='SELECT * FROM JOBTECH_ANALYSIS.MARTS.MART_MAIN'):
         df = pd.read_sql(query, conn)
 
         return df
-print(get_job_list())
