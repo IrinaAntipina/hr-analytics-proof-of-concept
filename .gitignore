@@ -212,7 +212,6 @@ __marimo__/
 .DS_Store
 __pycache__/
 
-test.py
 
 # DBT
 
