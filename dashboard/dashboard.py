@@ -1,7 +1,7 @@
 import streamlit as st
-from conn_warehouse import get_job_list
 from components.top_employers import show_top_employers
 from components.top_occupations import occupation_chart
+from components.exp_license import show_exp_data
 
 chooser = ["Alla områden", "Installation, drift, underhåll", "Kropps- och skönhetsvård", "Kultur, media, design"]
 mart_schema = {
@@ -36,7 +36,7 @@ def dashboard_page():
     with col1:
         st.pyplot(occupation_chart(mart_schema[option]))   
     with col2:
-        st.info("Other content here")
+        show_exp_data(mart_schema[option])
     with col3:
         st.info("Other content here")
     with col4:
