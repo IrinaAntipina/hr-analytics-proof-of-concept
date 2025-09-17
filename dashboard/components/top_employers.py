@@ -2,17 +2,23 @@ import streamlit as st
 import plotly.express as px
 from conn_warehouse import get_job_list  
 
-def get_top_employers():
-    df_jobs = get_job_list()
+def get_top_employers(table):
+    df_jobs = get_job_list(query=f"""
+                            SELECT 
+                                employer_name,
+                                vacancies
+                            FROM
+                                {table}
+                            """)
 
     df_top = df_jobs.groupby('EMPLOYER_NAME', as_index=False)['VACANCIES'].sum()
     df_top = df_top.sort_values(by='VACANCIES', ascending=False).head(10)
     return df_top
 
-def show_top_employers():
+def show_top_employers(table='mart_main'):
     st.subheader("Top Ten Employers")
 
-    df_top = get_top_employers()
+    df_top = get_top_employers(table)
 
     
     fig = px.bar(
