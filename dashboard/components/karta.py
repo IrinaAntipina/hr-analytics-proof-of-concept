@@ -4,7 +4,6 @@ import json
 from conn_warehouse import get_job_list
 
 
-
 def karta(table="mart_main"):
 
     df = get_job_list(query=f"""
