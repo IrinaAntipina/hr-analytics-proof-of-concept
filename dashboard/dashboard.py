@@ -36,10 +36,7 @@ def dashboard_page():
         st.markdown('</div>', unsafe_allow_html=True)
 
     # Main content
-    st.markdown(
-        "<h1 style='text-align: center; color: blue;'>Jobtech Analysis </h1>",
-        unsafe_allow_html=True
-    )
+    st.markdown('<h1 class="dashboard-title">📊 Employment Analytics Dashboard</h1>', unsafe_allow_html=True)
     st.write("---")
 
     col1, col2 = st.columns(2)
