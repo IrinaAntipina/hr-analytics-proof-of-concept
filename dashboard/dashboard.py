@@ -39,16 +39,22 @@ def dashboard_page():
     st.markdown('<h1 class="dashboard-title">📊 Employment Analytics Dashboard</h1>', unsafe_allow_html=True)
     st.write("---")
 
-    col1, col2 = st.columns(2)
-    col3, col4 = st.columns(2)
-
+    col1, col2 = st.columns(2, gap="large")
+    col3, col4 = st.columns(2, gap="large")
     with col1:
-        st.pyplot(occupation_chart(mart_schema[option]))   
+        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
+        st.markdown('<div class="card-title">💼 Top 10 Occupations</div>', unsafe_allow_html=True)
+        st.pyplot(occupation_chart(mart_schema[option]))
     with col2:
+        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
+        st.markdown('<div class="card-title">🚗 Driver License & Experience</div>', unsafe_allow_html=True)
         show_exp_data(mart_schema[option])
     with col3:
-        st.info("Other content here")
+        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
+        st.markdown('<div class="card-title">🗺️ Geographic Distribution</div>', unsafe_allow_html=True)
     with col4:
+        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
+        st.markdown('<div class="card-title">🏢 Top 10 Employers</div>', unsafe_allow_html=True)
         show_top_employers(mart_schema[option])
 
 if __name__ == "__main__":

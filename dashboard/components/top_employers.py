@@ -16,7 +16,6 @@ def get_top_employers(table):
     return df_top
 
 def show_top_employers(table='mart_main'):
-    st.subheader("Top Ten Employers")
 
     df_top = get_top_employers(table)
 
