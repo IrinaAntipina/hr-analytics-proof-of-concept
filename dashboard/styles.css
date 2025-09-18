@@ -1,23 +1,13 @@
 
-
-/* Убираем лишний верхний padding */
 .main .block-container {
     padding-top: 0.5rem;
     padding-bottom: 1rem;
 }
 
-#root > div:nth-child(1) > div.withScreencast > div > div > div > div
-
-/* Тёмная тема */
-body, .main {
-    background-color: #1e1e2f;
-    color: #eaeaea;
-}
-
 /* Sidebar */
 .css-1d391kg {
-    background-color: #2b2b3c;
-    border-right: 2px solid #3a3a4d;
+    background-color: #7a38e3;
+    border-right: 2px solid #cc7ff6;
 }
 
 /* Dashboard cards */
@@ -41,12 +31,13 @@ body, .main {
 
 /* Card titles */
 .card-title {
-    color: #f1f2f6;
+    color: #707174;
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     border-bottom: 2px solid #3498db;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.5rem;
 }
 
 /* KPI metrics */

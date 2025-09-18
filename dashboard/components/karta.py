@@ -77,7 +77,7 @@ def create_map(table="mart_main", occupation=None):
 
     fig.update_layout(
         mapbox=dict(
-            style="carto-darkmatter",
+            style="carto-positron",
             zoom=3.2, 
             center=dict(lat=62.6952, lon=13.9149)
         ),
