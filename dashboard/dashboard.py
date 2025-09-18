@@ -2,6 +2,7 @@ import streamlit as st
 from components.top_employers import show_top_employers
 from components.top_occupations import occupation_chart
 from components.exp_license import show_pie_chart
+from components.karta import create_map
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -60,6 +61,7 @@ def dashboard_page():
     with col3:
         #st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
         st.markdown('<div class="card-title">🗺️ Geographic Distribution</div>', unsafe_allow_html=True)
+        st.map(create_map(mart_schema[option]))
         #st.markdown('</div>', unsafe_allow_html=True)
     with col4:
         #st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
