@@ -1,7 +1,7 @@
 import streamlit as st
 from components.top_employers import show_top_employers
 from components.top_occupations import occupation_chart
-from components.exp_license import show_exp_data
+from components.exp_license import show_pie_chart
 from components.karta import create_map
 
 def local_css(file_name):
@@ -47,27 +47,23 @@ def dashboard_page():
     st.write("---")
 
     col1, col2 = st.columns(2, gap="large")
-    col3, col4 = st.columns(2, gap="large")
     with col1:
-        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
-        st.markdown('<div class="card-title">💼 Top 10 Occupations</div>', unsafe_allow_html=True)
-        st.pyplot(occupation_chart(mart_schema[option]))
-        st.markdown('</div>', unsafe_allow_html=True)
+        
+            st.markdown('<div class="card-title">💼 Top 10 Occupations</div>', unsafe_allow_html=True)
+            st.pyplot(occupation_chart(mart_schema[option]))
     with col2:
-        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
-        st.markdown('<div class="card-title">🚗 Driver License & Experience</div>', unsafe_allow_html=True)
-        show_exp_data(mart_schema[option])
-        st.markdown('</div>', unsafe_allow_html=True)
+        
+            st.markdown('<div class="card-title">🚗 Driver License & Experience</div>', unsafe_allow_html=True)
+            show_pie_chart(mart_schema[option])
+    col3, col4 = st.columns(2, gap="large")
     with col3:
-        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
-        st.markdown('<div class="card-title">🗺️ Geographic Distribution</div>', unsafe_allow_html=True)
-        st.map(create_map(mart_schema[option]))
-        st.markdown('</div>', unsafe_allow_html=True)
+        
+            st.markdown('<div class="card-title">🗺️ Geographic Distribution</div>', unsafe_allow_html=True)
+            st.plotly_chart(create_map(mart_schema[option]))
     with col4:
-        st.markdown('<div class="dashboard-card">', unsafe_allow_html=True)
-        st.markdown('<div class="card-title">🏢 Top 10 Employers</div>', unsafe_allow_html=True)
-        show_top_employers(mart_schema[option])
-        st.markdown('</div>', unsafe_allow_html=True)
+        
+            st.markdown('<div class="card-title">🏢 Top 10 Employers</div>', unsafe_allow_html=True)
+            show_top_employers(mart_schema[option])
 
 if __name__ == "__main__":
     dashboard_page()

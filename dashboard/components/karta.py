@@ -78,11 +78,11 @@ def create_map(table="mart_main", occupation=None):
     fig.update_layout(
         mapbox=dict(
             style="carto-darkmatter",
-            zoom=3.8, 
+            zoom=3.2, 
             center=dict(lat=62.6952, lon=13.9149)
         ),
-        width=600,
-        height=650,
+        #width=600,
+        #height=650,
         margin=dict(r=0, t=50, l=0, b=0),
         title=dict(
             text=f"""
