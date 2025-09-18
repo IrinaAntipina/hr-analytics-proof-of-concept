@@ -26,7 +26,8 @@ select
     de.workplace_postcode,
     de.workplace_country,
     ft.vacancies,
-    ft.application_deadline
+    ft.application_deadline,
+    ft.publication_date
 from
     fct_table ft
 left join dim_employer de ON de.employer_id = ft.employer_id

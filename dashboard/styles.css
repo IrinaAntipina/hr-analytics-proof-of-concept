@@ -1,58 +1,61 @@
-/* Sidebar styling */
-    .css-1d391kg {
-        background-color: #f8f9fa;
-        border-right: 2px solid #e9ecef;
-    }
-    
-    /* Main content area */
-    .main .block-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-    
-    /* Dashboard cards */
-    .dashboard-card {
-        background-color: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        border: 1px solid #e9ecef;
-        margin-bottom: 1rem;
-        height: 350px;
-        overflow: auto;
-    }
-    
-    /* Filter section */
-    .filter-section {
-        background-color: white;
-        padding: 1rem;
-        border-radius: 8px;
-        margin-top: 1rem;
-        border: 1px solid #dee2e6;
-    }
-    
-    /* Logo container */
-    .logo-container {
-        text-align: center;
-        padding: 1rem;
-        margin-bottom: 2rem;
-    }
-    
-    /* Title styling */
-    .dashboard-title {
-        color: #2c3e50;
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-        font-weight: bold;
-    }
-    
-    /* Card titles */
-    .card-title {
-        color: #34495e;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 0.5rem;
-    }
+
+
+/* Убираем лишний верхний padding */
+.main .block-container {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+#root > div:nth-child(1) > div.withScreencast > div > div > div > div
+
+/* Тёмная тема */
+body, .main {
+    background-color: #1e1e2f;
+    color: #eaeaea;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: #2b2b3c;
+    border-right: 2px solid #3a3a4d;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+    background-color: #2b2b3c;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 1px solid #444;
+    margin-bottom: 1rem;
+}
+
+/* Title */
+.dashboard-title {
+    color: #f5f6fa;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* Card titles */
+.card-title {
+    color: #f1f2f6;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+}
+
+/* KPI metrics */
+[data-testid="stMetricValue"] {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffb347;
+}
+[data-testid="stMetricLabel"] {
+    font-size: 0.9rem;
+    color: #ccc;
+}
