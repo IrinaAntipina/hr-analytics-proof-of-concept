@@ -36,8 +36,11 @@ def occupation_chart(table="mart_main"):
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_visible(False)
+    ax.spines["bottom"].set_visible(False)
     
     ax.tick_params(axis='y', which='both', length=0)
+    ax.tick_params(axis='x', which='both', length=0)
     
     for i, v in enumerate(df["TOTAL_VACANCIES"]):
         ax.text(v + 5, i, str(v), va='center', fontsize=10)
