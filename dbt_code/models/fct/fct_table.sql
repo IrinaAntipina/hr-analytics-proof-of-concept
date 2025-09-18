@@ -7,7 +7,8 @@ select
     {{dbt_utils.generate_surrogate_key(["occupation__label"])}} as occupation_id,
     vacancies,
     relevance,
-    application_deadline
+    application_deadline,
+    publication_date
 
 from
     fct_job_ads

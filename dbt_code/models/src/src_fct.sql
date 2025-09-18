@@ -7,6 +7,8 @@ SELECT
     occupation__label, -- will be used as occupation_id
     number_of_vacancies as vacancies,
     relevance,
-    application_deadline
+    application_deadline,
+    publication_date
+
 FROM
     stg_job_ads
